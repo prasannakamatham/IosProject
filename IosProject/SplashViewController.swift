@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        perform(#selector(self.showNavController), with: nil, afterDelay: 5)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    @objc func showNavController()
+    {
+        performSegue(withIdentifier: "SplashViewController", sender: self)
     }
 
     override func didReceiveMemoryWarning() {
